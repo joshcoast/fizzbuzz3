@@ -2,7 +2,7 @@
 <html>
 <body>
 <h1>Fizz Buzz App</h1>
-<h2>Step 1</h2>
+<h2>Step 2</h2>
 
 <p>Output:</p>
 <p>
@@ -10,6 +10,10 @@
 $firstNumber = 1;
 $secondNumber = 20;
 foreach (range($firstNumber, $secondNumber) as $number) {
+    if (strpos($number, '3') !== false ) {
+        echo 'lucky ';
+        continue;
+    }
     if (0 !== $number % 3 && 0 !== $number % 5) {
         echo $number.' ';
         continue;
